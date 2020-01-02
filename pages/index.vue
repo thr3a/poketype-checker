@@ -23,6 +23,7 @@
         >
           GitHub
         </a>
+        <button v-on:click="counter += 1">{{ counter }}</button>
       </div>
     </div>
   </div>
@@ -34,6 +35,11 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  data: () => {
+    return {
+      counter: 0
+    }
   }
 }
 </script>
