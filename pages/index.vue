@@ -88,7 +88,7 @@ export default {
 
 <style>
 .main {
-  margin-top: 20px;
+  margin-top: 2px;
 }
 .rival-types {
   display: flex;

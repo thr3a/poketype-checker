@@ -41,7 +41,7 @@ export default {
   padding-top: 4px;
   padding-bottom: 4px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 .normal {
