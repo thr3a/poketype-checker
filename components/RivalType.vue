@@ -33,6 +33,7 @@ export default {
 .effectiveness {
   display:inline-block;
   font-size: 16px;
+  line-height: 15px;
 }
 .type {
   margin-left: auto;
