@@ -14,7 +14,7 @@ const typeLocale = require('./typeLocale.js')
 export default {
   props: {
     type: String,
-    score: Number
+    score: String
   },
   computed: {
     localedType () {
