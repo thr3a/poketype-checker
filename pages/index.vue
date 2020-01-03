@@ -4,13 +4,13 @@
       <rival-type
         :type="type"
         :score="calcScore(type)"
-        :key=index
+        :key="index"
         v-for="(type, index) in types"
       />
     </div>
     <div class="space" />
     <div class="my-types">
-      <my-type :type="type" :key=index v-for="(type, index) in types" @changedMyType="setSelected" />
+      <my-type :type="type" :key="index" v-for="(type, index) in types" @changedMyType="setSelected" />
     </div>
   </div>
 </template>

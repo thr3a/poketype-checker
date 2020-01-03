@@ -3,7 +3,9 @@
     <div :class="type" class="type">
       <span class="label">{{ localedType }}</span>
     </div>
-    <div class="effectiveness">{{ score }}</div>
+    <div class="effectiveness">
+      {{ score }}
+    </div>
   </div>
 </template>
 <script>
