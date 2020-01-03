@@ -31,11 +31,11 @@ export default {
 }
 .type {
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .normal {
   background-color: #c5c0a6;

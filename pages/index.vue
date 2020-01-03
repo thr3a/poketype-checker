@@ -81,7 +81,6 @@ export default {
 
 <style>
 .main {
-  width: 600px;
   margin-top: 20px;
 }
 .rival-types {
@@ -89,14 +88,12 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 600px;
 }
 .my-types {
   display: flex;
   flex-wrap: wrap;
-  width: 600px;
 }
 .space {
-  height: 300px;
+  height: 10px;
 }
 </style>

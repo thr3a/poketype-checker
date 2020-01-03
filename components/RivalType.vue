@@ -28,7 +28,7 @@ export default {
 .rival-type-container {
   text-align: center;
   width: 30%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .effectiveness {
   display:inline-block;
