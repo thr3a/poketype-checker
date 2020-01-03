@@ -44,7 +44,7 @@ export default {
   align-items: center;
   box-sizing: border-box;
   &.border {
-    border: 3px solid #000;
+    border: 4px solid #404040;
   }
 }
 .normal {
