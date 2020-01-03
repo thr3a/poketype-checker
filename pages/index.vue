@@ -8,9 +8,14 @@
         v-for="(type, index) in types"
       />
     </div>
-    <div class="space" />
     <div class="my-types">
-      <my-type :type="type" :key="index" v-for="(type, index) in types" @changedMyType="setSelected" />
+      <my-type
+        :type="type"
+        :is_active="is_active(type)"
+        :key="index"
+        v-for="(type, index) in types"
+        @changedMyType="setSelected"
+      />
     </div>
   </div>
 </template>
@@ -47,7 +52,6 @@ export default {
         'steel',
         'fairy'
       ],
-      // score: 0.5,
       scores: {},
       selected: ''
     }
@@ -74,6 +78,9 @@ export default {
           return 'x 0.5'
       }
       return '' // 初期
+    },
+    is_active (type) {
+      return this.selected === type
     }
   }
 }
@@ -92,8 +99,5 @@ export default {
 .my-types {
   display: flex;
   flex-wrap: wrap;
-}
-.space {
-  height: 10px;
 }
 </style>

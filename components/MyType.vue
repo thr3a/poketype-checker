@@ -1,6 +1,10 @@
 <template>
   <div class="my-type-container">
-    <div @click="changeType(type)" :class="type" class="type">
+    <div
+      @click="changeType(type)"
+      :class="[type, {border: is_active}]"
+      class="type"
+    >
       <span class="label">{{ localedType }}</span>
     </div>
   </div>
@@ -9,7 +13,8 @@
 const typeLocale = require('./typeLocale.js')
 export default {
   props: {
-    type: String
+    type: String,
+    is_active: Boolean
   },
   computed: {
     localedType () {
@@ -24,18 +29,23 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .my-type-container {
   width: 25%;
   text-align: center;
 }
 .type {
-  text-align: center;
   color: white;
   font-size: 16px;
   font-weight: bold;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  &.border {
+    border: 3px solid #000;
+  }
 }
 .normal {
   background-color: #c5c0a6;
