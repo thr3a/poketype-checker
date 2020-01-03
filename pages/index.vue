@@ -8,10 +8,10 @@
         v-for="(type, index) in types"
       />
     </div>
+    <div class="space" />
     <div class="my-types">
       <my-type :type="type" :key=index v-for="(type, index) in types" @changedMyType="setSelected" />
     </div>
-    {{ selected }}
   </div>
 </template>
 
@@ -27,7 +27,26 @@ export default {
   },
   data: () => {
     return {
-      types: ['fire', 'water', 'grass'],
+      types: [
+        'normal',
+        'fire',
+        'water',
+        'electric',
+        'grass',
+        'ice',
+        'fighting',
+        'poison',
+        'ground',
+        'flying',
+        'psychic',
+        'bug',
+        'rock',
+        'ghost',
+        'dragon',
+        'dark',
+        'steel',
+        'fairy'
+      ],
       // score: 0.5,
       scores: {},
       selected: ''
@@ -62,15 +81,22 @@ export default {
 
 <style>
 .main {
-  max-width: 600px;
+  width: 600px;
+  margin-top: 20px;
 }
 .rival-types {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 600px;
 }
 .my-types {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
+}
+.space {
+  height: 300px;
 }
 </style>
