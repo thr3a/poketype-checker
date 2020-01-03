@@ -67,7 +67,7 @@ export default {
         case 0:
           return '効果なし'
         case 1:
-          return ' '
+          return ''
         case 2:
           return 'x 2'
         case 4:
