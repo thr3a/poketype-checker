@@ -1,8 +1,8 @@
 <template>
   <div class="my-type-container">
     <div
-      @click="changeType(type)"
-      :class="[type, {border: is_active}]"
+      @click="toggleType(type)"
+      :class="[type, {border: isActive}]"
       class="type"
     >
       <span class="label">{{ localedType }}</span>
@@ -14,7 +14,7 @@ const typeLocale = require('./typeLocale.js')
 export default {
   props: {
     type: String,
-    is_active: Boolean
+    isActive: Boolean
   },
   computed: {
     localedType () {
@@ -22,8 +22,8 @@ export default {
     }
   },
   methods: {
-    changeType (type) {
-      this.$emit('changedMyType', type)
+    toggleType (type) {
+      this.$emit('toggleType', type)
     }
   }
 }
@@ -31,12 +31,12 @@ export default {
 
 <style lang="scss" scoped>
 .my-type-container {
-  width: 25%;
+  width: 20%;
   text-align: center;
 }
 .type {
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   height: 46px;
   display: flex;

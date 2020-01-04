@@ -26,7 +26,7 @@
 <script>
 import rivalType from '~/components/RivalType.vue'
 import myType from '~/components/MyType.vue'
-import AppFooter from '~/components/Footer.vue'
+import AppFooter from '~/componentos/Footer.vue'
 const pokeTypes = require('poke-types')
 
 export default {
@@ -63,8 +63,22 @@ export default {
   },
   methods: {
     chengedType (type) {
-      this.activeTypes = [type]
-      this.scores = pokeTypes.getTypeStrengths(type)
+      if (this.activeTypes.includes(type)) {
+        this.activeTypes = this.activeTypes.filter(e => e !== type)
+      } else if (this.activeTypes.length === 2) {
+        this.activeTypes = [this.activeTypes[1], type]
+      } else {
+        this.activeTypes.push(type)
+      }
+      if (this.activeTypes.length === 1) {
+        this.scores = pokeTypes.getTypeWeaknesses(this.activeTypes[0])
+      }
+      if (this.activeTypes.length === 0) {
+        this.scores = {}
+      }
+      if (this.activeTypes.length === 2) {
+        this.scores = pokeTypes.getTypeWeaknesses(this.activeTypes[0], this.activeTypes[1])
+      }
     },
     calcScore (rivalType) {
       const score = this.scores[rivalType]
@@ -91,7 +105,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .main {
   margin-top: 2px;
 }
