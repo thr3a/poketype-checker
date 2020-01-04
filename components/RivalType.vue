@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-const typeLocale = require('./typeLocale.js')
+import typeLocale from './typeLocale.js'
 
 export default {
   props: {

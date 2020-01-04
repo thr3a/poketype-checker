@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   normal: 'ノーマル',
   fire: 'ほのお',
   water: 'みず',
@@ -16,5 +16,6 @@ module.exports = {
   dragon: 'ドラゴン',
   dark: 'あく',
   steel: 'はがね',
-  fairy: 'フェアリー'
+  fairy: 'フェアリー',
+  reset: 'リセット'
 }
