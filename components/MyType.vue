@@ -23,13 +23,19 @@ export default {
   },
   methods: {
     toggleType (type) {
-      this.$emit('toggleType', type)
+      if (type === 'reset') {
+        this.$emit('resetType')
+      } else {
+        this.$emit('toggleType', type)
+      }
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "./type.scss";
+
 .my-type-container {
   width: 20%;
   text-align: center;
@@ -46,59 +52,5 @@ export default {
   &.border {
     border: 4px solid #404040;
   }
-}
-.normal {
-  background-color: #c5c0a6;
-}
-.grass {
-  background-color: #a5d839;
-}
-.fire {
-  background-color: #ee4e32;
-}
-.water {
-  background-color: #71aaff;
-}
-.fighting {
-  background-color: #b85f3b;
-}
-.flying {
-  background-color: #88a6ff;
-}
-.poison {
-  background-color: #a75d9d;
-}
-.ground {
-  background-color: #f3ce42;
-}
-.rock {
-  background-color: #d8bb67;
-}
-.bug {
-  background-color: #ccd700;
-}
-.ghost {
-  background-color: #8379d0;
-}
-.electric {
-  background-color: #fae528;
-}
-.psychic {
-  background-color: #e762af;
-}
-.ice {
-  background-color: #b0edfc;
-}
-.dragon {
-  background-color: #8b71ff;
-}
-.dark {
-  background-color: #8c6b48;
-}
-.steel {
-  background-color: #c9c1c9;
-}
-.fairy {
-  background-color: #f2a9f6;
 }
 </style>

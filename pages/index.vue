@@ -17,6 +17,10 @@
           v-for="(type, index) in types"
           @toggleType="chengedType"
         />
+        <my-type
+          :type="aaa"
+          @resetType="resetType"
+        />
       </div>
     </div>
     <AppFooter />
@@ -57,6 +61,7 @@ export default {
         'steel',
         'fairy'
       ],
+      aaa: 'reset',
       scores: {},
       activeTypes: []
     }
@@ -65,6 +70,10 @@ export default {
     chengedType (type) {
       this.activeTypes = [type]
       this.scores = pokeTypes.getTypeStrengths(type)
+    },
+    resetType () {
+      this.activeTypes = []
+      this.scores = {}
     },
     calcScore (rivalType) {
       const score = this.scores[rivalType]
@@ -92,22 +101,5 @@ export default {
 </script>
 
 <style lang="scss">
-.main {
-  margin-top: 2px;
-}
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.rival-types {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.my-types {
-  display: flex;
-  flex-wrap: wrap;
-}
+@import "../components/common.scss";
 </style>
