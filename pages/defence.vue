@@ -17,6 +17,10 @@
           v-for="(type, index) in types"
           @toggleType="chengedType"
         />
+        <my-type
+          :type="aaa"
+          @resetType="resetType"
+        />
       </div>
     </div>
     <AppFooter />
@@ -57,6 +61,7 @@ export default {
         'steel',
         'fairy'
       ],
+      aaa: 'reset',
       scores: {},
       activeTypes: []
     }
@@ -79,6 +84,10 @@ export default {
       if (this.activeTypes.length === 2) {
         this.scores = pokeTypes.getTypeWeaknesses(this.activeTypes[0], this.activeTypes[1])
       }
+    },
+    resetType () {
+      this.activeTypes = []
+      this.scores = {}
     },
     calcScore (rivalType) {
       const score = this.scores[rivalType]
