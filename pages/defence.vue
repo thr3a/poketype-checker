@@ -26,7 +26,7 @@
 <script>
 import rivalType from '~/components/RivalType.vue'
 import myType from '~/components/MyType.vue'
-import AppFooter from '~/componentos/Footer.vue'
+import AppFooter from '~/components/Footer.vue'
 const pokeTypes = require('poke-types')
 
 export default {
