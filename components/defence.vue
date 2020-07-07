@@ -1,27 +1,25 @@
 <template>
-  <div id="app">
-    <div class="main">
-      <div class="rival-types">
-        <rival-type
-          :type="type"
-          :score="calcScore(type)"
-          :key="index"
-          v-for="(type, index) in types"
-        />
-      </div>
-      <div class="my-types">
-        <my-type
-          :type="type"
-          :isActive="isActive(type)"
-          :key="index"
-          v-for="(type, index) in types"
-          @toggleType="chengedType"
-        />
-        <my-type
-          :type="aaa"
-          @resetType="resetType"
-        />
-      </div>
+  <div>
+    <div class="rival-types">
+      <rival-type
+        :type="type"
+        :score="calcScore(type)"
+        :key="index"
+        v-for="(type, index) in types"
+      />
+    </div>
+    <div class="my-types">
+      <my-type
+        :type="type"
+        :isActive="isActive(type)"
+        :key="index"
+        v-for="(type, index) in types"
+        @toggleType="chengedType"
+      />
+      <my-type
+        :type="aaa"
+        @resetType="resetType"
+      />
     </div>
   </div>
 </template>
