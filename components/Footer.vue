@@ -1,15 +1,25 @@
 <template>
   <div class="footer">
     <div class="menus">
-      <nuxt-link to="/" class="menu" exact>
-        <span id="label">攻撃</span>
-      </nuxt-link>
-      <nuxt-link to="/defence" class="menu">
-        <span id="label">防御</span>
-      </nuxt-link>
+      <button @click="setView('defence')" v-bind:class="{active: $store.state.view == 'defence'}" class="menu">
+        防御
+      </button>
+      <button @click="setView('attack')" v-bind:class="{active: $store.state.view == 'attack'}" class="menu">
+        攻撃
+      </button>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    setView (val) {
+      this.$store.commit('setView', val)
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .footer {
@@ -34,8 +44,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &.nuxt-link-active {
-    background-color: #87cefa;
-  }
+}
+
+.active {
+  background:#87cefa;
 }
 </style>
