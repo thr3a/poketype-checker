@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div class="main">
-      <p>1</p>
       <mainView :is="$store.state.view" />
     </div>
     <appFooter />
