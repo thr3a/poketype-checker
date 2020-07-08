@@ -42,7 +42,7 @@ export default {
 }
 .type {
   color: white;
-  font-size: 0.9rem;
+  font-size: 16px;
   font-weight: bold;
   height: 8vh;
   display: flex;
