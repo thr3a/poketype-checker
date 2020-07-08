@@ -1,10 +1,10 @@
 <template>
   <div class="footer">
     <div class="menus">
-      <button @click="setView('defence')" v-bind:class="{active: $store.state.view == 'defence'}" class="menu">
+      <button :class="{active: $store.state.view == 'defence'}" class="menu" @click="setView('defence')">
         防御
       </button>
-      <button @click="setView('attack')" v-bind:class="{active: $store.state.view == 'attack'}" class="menu">
+      <button :class="{active: $store.state.view == 'attack'}" class="menu" @click="setView('attack')">
         攻撃
       </button>
     </div>

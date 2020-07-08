@@ -13,6 +13,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    "vue/no-unused-components": "off"
+    'vue/no-unused-components': 'off'
   }
 }

@@ -2,18 +2,18 @@
   <div>
     <div class="rival-types">
       <rival-type
-        :type="type"
-        :score="calcScore(type)"
-        :key="index"
         v-for="(type, index) in types"
+        :key="index"
+        :type="type"
+        :score="scores[type]"
       />
     </div>
     <div class="my-types">
       <my-type
-        :type="type"
-        :isActive="isActive(type)"
-        :key="index"
         v-for="(type, index) in types"
+        :key="index"
+        :type="type"
+        :is-active="isActive(type)"
         @toggleType="chengedType"
       />
       <my-type
@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import rivalType from '~/components/RivalType.vue'
-import myType from '~/components/MyType.vue'
+import rivalType from '~/components/rivalType.vue'
+import myType from '~/components/myType.vue'
 const pokeTypes = require('poke-types')
 
 export default {
@@ -83,24 +83,6 @@ export default {
     resetType () {
       this.activeTypes = []
       this.scores = {}
-    },
-    calcScore (rivalType) {
-      const score = this.scores[rivalType]
-      switch (score) {
-        case 0:
-          return '効果なし'
-        case 1:
-          return ''
-        case 2:
-          return 'x 2.0'
-        case 4:
-          return 'x 4.0'
-        case 0.25:
-          return 'x 0.25'
-        case 0.5:
-          return 'x 0.5'
-      }
-      return '' // 初期
     },
     isActive (type) {
       return this.activeTypes.includes(type)
