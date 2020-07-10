@@ -16,6 +16,6 @@ export default {
   dragon: 'ドラゴン',
   dark: 'あく',
   steel: 'はがね',
-  fairy: 'フェアリー',
+  fairy: 'フェアリ',
   reset: 'リセット'
 }
