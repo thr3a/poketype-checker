@@ -18,7 +18,7 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'http://poketype.turai.work/' },
       { hid: 'og:title', property: 'og:title', content: 'ポケモンタイプ相性チェッカー' },
-      { hid: 'og:description', property: 'og:description', content: '共通ディスクリプション' },
+      { hid: 'og:description', property: 'og:description', content: 'ポケモンタイプ相性を簡単にチェック' },
       { hid: 'og:image', property: 'og:image', content: '/ogp.jpg' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:image', content: '/ogp.jpg' }
