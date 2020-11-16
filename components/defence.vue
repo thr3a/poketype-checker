@@ -17,7 +17,7 @@
         @toggleType="chengedType"
       />
       <my-type
-        :type="aaa"
+        :type="reset"
         @resetType="resetType"
       />
     </div>
@@ -56,7 +56,7 @@ export default {
         'steel',
         'fairy'
       ],
-      aaa: 'reset',
+      reset: 'reset',
       scores: {},
       activeTypes: []
     }
