@@ -65,7 +65,7 @@ export default {
 .effectiveness {
   display:inline-block;
   font-size: 16px;
-  line-height: 15px;
+  line-height: 1vh;
   font-weight: bold;
   color: #383e56;
   &.weak {
@@ -78,8 +78,8 @@ export default {
 .type {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 0.6vh;
+  padding-bottom: 0.6vh;
   color: white;
   font-size: 16px;
   font-weight: bold;
