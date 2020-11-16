@@ -35,7 +35,8 @@ export default {
 }
 .menu {
   color: #000;
-  height: 10vh;
+  font-weight: bold;
+  height: 5vh;
   width: 50%;
   margin-left: auto;
   margin-right: auto;

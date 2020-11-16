@@ -60,12 +60,11 @@ export default {
 .rival-type-container {
   text-align: center;
   width: 30%;
-  margin-bottom: 10px;
+  height: 9vh;
 }
 .effectiveness {
   display:inline-block;
   font-size: 16px;
-  line-height: 1vh;
   font-weight: bold;
   color: #383e56;
   &.weak {
@@ -78,8 +77,8 @@ export default {
 .type {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 0.6vh;
-  padding-bottom: 0.6vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
   color: white;
   font-size: 16px;
   font-weight: bold;

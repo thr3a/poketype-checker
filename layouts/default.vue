@@ -37,8 +37,14 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.my-types-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 38vh;
+}
 .my-types {
   display: flex;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 </style>

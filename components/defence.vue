@@ -8,18 +8,20 @@
         :score="scores[type]"
       />
     </div>
-    <div class="my-types">
-      <my-type
-        v-for="(type, index) in types"
-        :key="index"
-        :type="type"
-        :is-active="isActive(type)"
-        @toggleType="chengedType"
-      />
-      <my-type
-        :type="reset"
-        @resetType="resetType"
-      />
+    <div class="my-types-wrapper">
+      <div class="my-types">
+        <my-type
+          v-for="(type, index) in types"
+          :key="index"
+          :type="type"
+          :is-active="isActive(type)"
+          @toggleType="chengedType"
+        />
+        <my-type
+          :type="reset"
+          @resetType="resetType"
+        />
+      </div>
     </div>
   </div>
 </template>
